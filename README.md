@@ -22,9 +22,11 @@ Play:
 It has currently only been tested in Linux (Ubuntu 20.04).
 
 ## Screenshot
-![](https://raw.github.com/lallassu/moonshot/master/preview1.png)
-![](https://raw.github.com/lallassu/moonshot/master/preview2.png)
+![](https://raw.githubusercontent.com/Lallassu/moonshot/main/preview1.png)
+![](https://raw.githubusercontent.com/Lallassu/moonshot/main/preview1.png)
 
 ## Youtube Video
-[![](https://raw.github.com/lallassu/moonshot/master/videopreview.png)](https://youtu.be/Mjyq_WZDviA)
+[![](https://raw.githubusercontent.com/Lallassu/moonshot/main/preview1.png)](https://youtu.be/Mjyq_WZDviA)
 
+## License
+MIT
