@@ -68,12 +68,12 @@
         "success": "assets/sounds/success.mp3"
     },
     "shaders": {
-        "regular_fs": "shaders/frag.fs",
-        "regular_vs": "shaders/vert.vs",
-        "texture_fs": "shaders/texture.fs",
-        "texture_vs": "shaders/texture.vs",
-        "particle_fs": "shaders/particle.fs",
-        "particle_vs": "shaders/particle.vs"
+        "regular_fs": "assets/shaders/frag.fs",
+        "regular_vs": "assets/shaders/vert.vs",
+        "texture_fs": "assets/shaders/texture.fs",
+        "texture_vs": "assets/shaders/texture.vs",
+        "particle_fs": "assets/shaders/particle.fs",
+        "particle_vs": "assets/shaders/particle.vs"
     },
     "colors": {
         "menuRegular": {"r": 1.0, "g": 0.0, "b": 0, "a": 1.0},
