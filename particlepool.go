@@ -131,9 +131,6 @@ func (pp *ParticlePool) Draw(dt float64) {
 		panic(err)
 	}
 
-	// gl.Enable(gl.BLEND)
-	// gl.BlendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-
 	gl.BindVertexArray(pp.vao)
 	gl.DrawArraysInstanced(gl.POINTS, 0, 1, int32(pp.activeParticles))
 	gl.BindVertexArray(0)

@@ -81,7 +81,6 @@ func (p *Phys) Update(dt float64) {
 			if world.IsActive(int(x+ax), int(y+ay)) {
 				hit = true
 				p.hit = true
-				// TBD: p.rotation = ?
 				break
 			}
 		}

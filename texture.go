@@ -5,13 +5,11 @@ import (
 	"image"
 	"image/color"
 	"image/draw"
-	"math/rand"
-	"time"
-	// jpeg format support
 	_ "image/jpeg"
-	// png format support
 	_ "image/png"
+	"math/rand"
 	"os"
+	"time"
 
 	"github.com/go-gl/gl/all-core/gl"
 )
@@ -82,21 +80,6 @@ func (texture *Texture2D) Load(textureFile string, flipH, flipV bool) (*image.RG
 		int32(rgba.Rect.Size().X), int32(rgba.Rect.Size().Y),
 		0, gl.RGBA, gl.UNSIGNED_BYTE, gl.Ptr(rgba.Pix))
 
-	/*
-		// or we can use RGB color model
-		gl.TexImage2D(gl.TEXTURE_2D, 0, gl.RGB,
-			int32(rgba.Rect.Size().X), int32(rgba.Rect.Size().Y),
-			0, gl.RGB, gl.UNSIGNED_BYTE, gl.Ptr(texture.rgba2RGB(rgba)),
-		)
-	*/
-	/*
-		// random texture
-		rgba = randomRGBA(512, 512)
-		gl.TexImage2D(gl.TEXTURE_2D, 0, gl.RGBA,
-			int32(rgba.Rect.Size().X), int32(rgba.Rect.Size().Y),
-			0, gl.RGBA, gl.UNSIGNED_BYTE, gl.Ptr(rgba.Pix),
-		)
-	*/
 	gl.GenerateMipmap(gl.TEXTURE_2D)
 
 	return rgba, nil
@@ -126,12 +109,6 @@ func (texture *Texture2D) rgba2RGB(rgba *image.RGBA) []uint8 {
 			rgb = append(rgb, uint8(r), uint8(g), uint8(b))
 		}
 	}
-	/*
-		// manually convert
-		for i := 0; i < len(rgba.Pix); i += 4 {
-			rgb = append(rgb, rgba.Pix[i], rgba.Pix[i+1], rgba.Pix[i+2])
-		}
-	*/
 	return rgb
 }
 

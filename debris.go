@@ -30,6 +30,6 @@ func (s *Debris) Hit(x, y int, objType ObjectType) {
 	if objType == ObjectMoon || objType == ObjectDebris {
 		return
 	}
-	//s.removed = true
+
 	s.Explode(int(s.x), int(s.y))
 }

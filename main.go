@@ -65,8 +65,6 @@ func init() {
 
 var view = mgl32.Translate3D(-screenWidth/2, -screenHeight/2, -screenWidth+43)
 
-//var view = mgl32.Translate3D(-20, -20, -180) //-screenWidth+43)
-
 var projection = mgl32.Mat4{}
 
 func main() {
@@ -165,7 +163,6 @@ func main() {
 		}
 
 		background.Draw(dt)
-		// Detect collision between objects
 		DetectCollisions(dt)
 
 		if rand.Intn(10) > 8 {
@@ -250,7 +247,6 @@ func DetectCollisions(dt float64) {
 					if p1.IsActive(int(x), int(y)) {
 						p.Hit(int(x), int(y), p1.GetObjType())
 						p1.Hit(int(x), int(y), p.GetObjType())
-						//world.Add(int(x), int(y), 0xFFFFF, 0xFFFFFF, 0, 0xFFFFFF)
 						break
 					}
 				}

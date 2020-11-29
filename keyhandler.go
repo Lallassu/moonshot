@@ -81,10 +81,6 @@ func (k *KeyHandler) Process(w *glfw.Window) {
 		rocket.Release()
 	}
 
-	if glfw.Press == w.GetKey(GLKeys[conf.KeyDumpFuel]) {
-		// TBD
-	}
-
 	if glfw.Press == w.GetKey(GLKeys[conf.KeyDebugInfo]) {
 		if time.Since(k.lastTime).Milliseconds() > 200 {
 			k.lastTime = time.Now()
