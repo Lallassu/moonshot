@@ -3,7 +3,7 @@
 in vec4 particlecolor;
 in float size;
 in vec2 pos;
-out vec4 color;
+layout(location = 0) out vec4 color;
 
 void main() 
 {
