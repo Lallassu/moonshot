@@ -1,9 +1,8 @@
 #version 330 core
-
-uniform mat4 model, view, projection;
-
 layout (location = 0) in vec3 pos;
 layout (location = 1) in vec4 color;
+
+uniform mat4 model, view, projection;
 
 out vec4 fragmentColor;
 
